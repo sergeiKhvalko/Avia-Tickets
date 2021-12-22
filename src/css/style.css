@@ -28,8 +28,18 @@
 }
 
 /* Header styles */
+.header .logo {
+    position: relative;
+}
 .header .brand-logo {
     position: static;
+}
+
+@media only screen and (max-width: 992px) {
+    .header .brand-logo {
+        left: 0;
+        transform: none;
+    }
 }
 
 .header .currency-select input.select-dropdown {
@@ -101,9 +111,39 @@
 }
 
 .tickets-empty-res-msg {
+    margin-bottom: 20px;
     padding: 10px 15px;
     text-align: center;
     background: whitesmoke;
     font-weight: bold;
     font-size: 18px;
+}
+
+.form-section {
+    margin-top: 4rem;
+}
+
+.form-section input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #512da8;
+    box-shadow: 0 1px 0 0 #512da8;
+}
+
+.form-section .datepicker-date-display {
+    background-color: #512da8;
+}
+
+.form-section .datepicker-cancel {
+    color: #512da8;
+}
+
+.form-section .datepicker-done {
+    color: #512da8;
+}
+
+.form-section .datepicker-today {
+    color: #fff;
+}
+
+.form-section .datepicker-table td.is-selected {
+    background-color: #512da8 !important;
 }

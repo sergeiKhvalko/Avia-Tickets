@@ -27,7 +27,7 @@ export function getAutocompleteInstance(elem) {
 const datepickers = document.querySelectorAll('.datepicker');
 M.Datepicker.init(datepickers, {
   showClearBtn: true,
-  format: 'yyyy-mm',
+  format: 'dd-mm-yyyy',
 });
 
 export function getDatePickerInstance(elem) {

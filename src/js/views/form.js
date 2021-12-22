@@ -31,11 +31,17 @@ import {
     }
   
     get departDateValue() {
-      return this.depart.toString();
+      const dateValue = this.depart.toString();
+      const index = dateValue.indexOf('-', 0);
+      const departDate = dateValue.slice(index + 1);
+      return departDate.split('-').reverse().join('-');
     }
   
     get returnDateValue() {
-      return this.return.toString();
+      const dateValue = this.return.toString();
+      const index = dateValue.indexOf('-', 0);
+      const returntDate = dateValue.slice(index + 1);
+      return returntDate.split('-').reverse().join('-');
     }
   
     setAutocompleteData(data) {
